@@ -1,13 +1,17 @@
 <template>
 <transaction :name="transition">
   <home-page-banner></home-page-banner>
+  <home-page-intro></home-page-intro>
 <home-page-cars></home-page-cars>
+<home-page-our-services></home-page-our-services>
 </transaction>
 </template>
 
 <script>
 import { watchList } from "../api";
 import Banner from "../components/Banner.vue";
+import Introduction from "../components/Introduction.vue";
+import OurServices from "../components/OurServices.vue";
 import CarList from "./CarList.vue";
 
 export default {
@@ -15,7 +19,9 @@ export default {
 
   components: {
     "home-page-banner": Banner,
-    "home-page-cars": CarList
+    "home-page-cars": CarList,
+    "home-page-intro": Introduction,
+    "home-page-our-services": OurServices
   },
 
   props: {

@@ -5,16 +5,19 @@
     <transition name="fade" mode="out-in">
       <router-view class="view"></router-view>
     </transition>
+    <main-footer></main-footer>
   </div>
 </template>
 <script>
 import TopHeader from "./components/Header.vue";
 import MainHeader from "./components/MainHeader.vue";
+import Footer from "./components/Footer.vue";
 export default {
   name: "header",
   components: {
     "app-header": TopHeader,
-    "main-header": MainHeader
+    "main-header": MainHeader,
+    "main-footer": Footer
   }
 };
 </script>
@@ -1768,7 +1771,7 @@ a {
 }
 
 .about-body {
-  padding-top: 100px;
+  padding-top: 30px;
 
   .title {
     font-weight: 700;
@@ -1826,6 +1829,8 @@ a {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 30px;
+  margin-right 10px;
+  float: right;
   color: #f34b0a;
   text-decoration: none;
 
@@ -1840,7 +1845,7 @@ iframe {
 }
 
 .page-section {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 
   p {
     color: #444444 !important;
@@ -1939,7 +1944,8 @@ iframe {
 
 .serviceslist {
   width: 100%;
-  padding: 75px 0px 25px;
+  padding: 75px 0px 15px;
+  background-color: #FFF;
 
   .title {
     font-weight: 700;
@@ -2972,7 +2978,7 @@ blockquote {
   }
 
   .about-body {
-    padding-top: 50px;
+    padding-top: 30px;
 
     .icon-list {
       li {
@@ -3067,7 +3073,7 @@ blockquote {
   }
 
   .page-section {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .about-team-meet {
