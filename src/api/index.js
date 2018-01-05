@@ -6,13 +6,13 @@ const logRequests = !!process.env.DEBUG_API
 const api = createAPI({
   version: '/v0',
   config: {
-    // databaseURL: 'https://hacker-news.firebaseio.com'
-    apiKey: "AIzaSyDD0WsxHpAU5VV0N5R-orPnZ9BPWtbPokM",
-    authDomain: "toyotasg-d8f85.firebaseapp.com",
-    databaseURL: "https://toyotasg-d8f85.firebaseio.com",
-    projectId: "toyotasg-d8f85",
-    storageBucket: "toyotasg-d8f85.appspot.com",
-    messagingSenderId: "169683459062"
+     databaseURL: 'https://hacker-news.firebaseio.com'
+    // apiKey: "AIzaSyDD0WsxHpAU5VV0N5R-orPnZ9BPWtbPokM",
+    // authDomain: "toyotasg-d8f85.firebaseapp.com",
+    // databaseURL: "https://toyotasg-d8f85.firebaseio.com",
+    // projectId: "toyotasg-d8f85",
+    // storageBucket: "toyotasg-d8f85.appspot.com",
+    // messagingSenderId: "169683459062"
   }
 })
 

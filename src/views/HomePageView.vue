@@ -12,14 +12,14 @@ import { watchList } from "../api";
 import Banner from "../components/Banner.vue";
 import Introduction from "../components/Introduction.vue";
 import OurServices from "../components/OurServices.vue";
-import CarList from "./CarList.vue";
+import CarGrid from "./CarGrid.vue";
 
 export default {
   name: "home-page",
 
   components: {
     "home-page-banner": Banner,
-    "home-page-cars": CarList,
+    "home-page-cars": CarGrid,
     "home-page-intro": Introduction,
     "home-page-our-services": OurServices
   },

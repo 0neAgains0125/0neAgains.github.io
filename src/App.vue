@@ -6,18 +6,21 @@
       <router-view class="view"></router-view>
     </transition>
     <main-footer></main-footer>
+    <sub-footer></sub-footer>
   </div>
 </template>
 <script>
 import TopHeader from "./components/Header.vue";
 import MainHeader from "./components/MainHeader.vue";
 import Footer from "./components/Footer.vue";
+import SubFooter from "./components/SubFooter.vue";
 export default {
   name: "header",
   components: {
     "app-header": TopHeader,
     "main-header": MainHeader,
-    "main-footer": Footer
+    "main-footer": Footer,
+    "sub-footer": SubFooter
   }
 };
 </script>
@@ -262,7 +265,7 @@ body {
 }
 
 .content-area {
-  padding: 50px 0px;
+  padding: 10px 0px;
 }
 
 .option-bar {
@@ -1772,7 +1775,6 @@ a {
 
 .about-body {
   padding-top: 30px;
-
   .title {
     font-weight: 700;
     border-left: 4px solid #f34b0a;
@@ -1829,7 +1831,7 @@ a {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 30px;
-  margin-right 10px;
+  margin-right: 10px;
   float: right;
   color: #f34b0a;
   text-decoration: none;
