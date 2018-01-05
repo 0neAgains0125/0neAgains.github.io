@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" sizes="120x120" href="/public/logo-120.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <link rel="shortcut icon" sizes="48x48" href="/public/logo-48.png">
+  <meta name="theme-color" content="#f60">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" type="text/css" href="/public/dict/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/public/dict/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/public/dict/css/slider.css">
+  <link rel="stylesheet" type="text/css" href="/public/dict/css/font-awesome-4.5.0/css/font-awesome.min.css">
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/public/dict/css/style.css">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oleo+Script:400,700" rel="stylesheet">
+
+
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="/public/dict/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="/public/dict/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="/public/dict/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="/public/dict/js/html5shiv.min.js"></script>
+      <script src="/public/dict/js/respond.min.js"></script>
+      <![endif]-->
+  <style>
+    #skip a {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    #skip a:focus {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="skip">
+    <a href="#app">skip to content</a>
+  </div>
+  <!--vue-ssr-outlet-->
+  <script src="/public/dict/js/jquery-2.2.0.min.js"></script>
+  <script src="/public/dict/js/bootstrap.min.js"></script>
+  <script src="/public/dict/js/bootstrap-slider.js"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="/public/dict/js/ie10-viewport-bug-workaround.js"></script>
+  <!-- Custom javascript -->
+  <script src="/public/dict/js/app.js"></script>
+</body>
+
+</html>

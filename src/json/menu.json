@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "icon": "fa fa-home",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/home",
+            "displayName": "Home Page",
+            "title": "Home Page"
+        },
+        "vi": {
+            "path": "/trang-chu",
+            "displayName": "Trang chủ",
+            "title": "Home Page"
+        }
+    },
+    {
+        "id": 2,
+        "icon": "fa fa-car",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/used-car",
+            "displayName": "Used Car",
+            "title": "Used Car"
+        },
+        "vi": {
+            "path": "/xe-da-qua-su-dung",
+            "displayName": "Xe Đã Qua Sử Dụng",
+            "title": "Xe Đã Qua Sử Dụng"
+        }
+    },
+    {
+        "id": 3,
+        "icon": "fa fa-car",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/price",
+            "displayName": "Price",
+            "title": "Price"
+        },
+        "vi": {
+            "path": "/bang-gia-xe",
+            "displayName": "Bảng giá xe",
+            "title": "Bảng giá xe"
+        }
+    },
+    {
+        "id": 4,
+        "icon": "fa fa-car",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/dich-vu",
+            "displayName": "Dịch vụ",
+            "title": "Dịch vụ"
+        }
+    },
+    {
+        "id": 5,
+        "icon": "fa fa-car",
+        "parentId": 4,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/dich-vu/bao-hanh",
+            "displayName": "Bảo Hành",
+            "title": "Bảo Hành"
+        }
+    },
+    {
+        "id": 7,
+        "icon": "fa fa-car",
+        "parentId": 4,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/dich-vu/bao-duong",
+            "displayName": "Bảo Dưỡng",
+            "title": "Bảo Dưỡng"
+        }
+    },
+    {
+        "id": 8,
+        "icon": "fa fa-car",
+        "parentId": 4,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/dich-vu/sua-chua-dong-son",
+            "displayName": "Sửa chữa - Đồng Sơn",
+            "title": "Sửa chữa - Đồng Sơn"
+        }
+    },
+    {
+        "id": 9,
+        "icon": "fa fa-car",
+        "parentId": 4,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/dich-vu/cuu-ho-cuu-nan",
+            "displayName": "Cứu Hộ - Cứu Nạn",
+            "title": "Cứu Hộ - Cứu Nạn"
+        }
+    },
+    {
+        "id": 10,
+        "icon": "fa fa-car",
+        "parentId": 4,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/dich-vu/phu-tung-phu-kien",
+            "displayName": "Phụ Tùng - Phụ Kiện",
+            "title": "Phụ Tùng - Phụ Kiện"
+        }
+    },
+    {
+        "id": 11,
+        "icon": "fa fa-car",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/tu-van",
+            "displayName": "Tư vấn",
+            "title": "Tư vấn"
+        }
+    },
+    {
+        "id": 12,
+        "icon": "fa fa-car",
+        "parentId": 11,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/tu-van/bao-hiem",
+            "displayName": "Bảo Hiểm",
+            "title": "Bảo Hiểm"
+        }
+    },
+    {
+        "id": 13,
+        "icon": "fa fa-car",
+        "parentId": 11,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/tu-van/mua-xe-tra-gop",
+            "displayName": "Mua Xe Trả Góp",
+            "title": "Mua Xe Trả Góp"
+        }
+    },
+    {
+        "id": 14,
+        "icon": "fa fa-car",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/gioi-thieu",
+            "displayName": "Giới Thiệu",
+            "title": "Giới Thiệu"
+        }
+    },
+    {
+        "id": 14,
+        "icon": "fa fa-car",
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/services",
+            "displayName": "Services",
+            "title": "Services"
+        },
+        "vi": {
+            "path": "/lien-he",
+            "displayName": "Liên Hệ",
+            "title": "Liên Hệ"
+        }
+    }
+]
