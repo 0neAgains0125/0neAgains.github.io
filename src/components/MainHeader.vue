@@ -20,7 +20,7 @@
                     <!-- <li v-for="(menu,key) in menus" :key="key">
                         <a :href="menu[langCode].path" :title="menu[langCode].title" :class="menu[langCode].path === activedMenu[langCode].path ? 'active' : ''">{{menu[langCode].displayName}}</a></li>
                     -->
-                   <li class="dropdown" v-for="(menu,key) in menus" v-if="menu.parentId === 0" :key="key">
+                   <li class="dropdown" v-for="(menu,key) in menus" v-if="menu.parentId === 0 && menu.display === undefined" :key="key">
                        <a v-if="children(menu.id).length ===0" :href="menu[langCode].path" :title="menu[langCode].title" :class="menu[langCode].path === activedMenu[langCode].path ? 'active' : ''">{{menu[langCode].displayName}}</a>
                         <template v-else >
                             <a :href="menu[langCode].path" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{menu[langCode].displayName}}<span class="caret"></span></a>

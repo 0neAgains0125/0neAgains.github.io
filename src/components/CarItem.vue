@@ -7,7 +7,7 @@
                         <div class="caption car-content">
                             <div class="header b-items-cars-one-info-header s-lineDownLeft">
                                 <h3>
-                                    <a href="car_details.html">Vencer Sarthe Supercar</a>
+                                    <a href="/bang-gia-xe/1">Vencer Sarthe Supercar</a>
                                     <span>$54,000</span>
                                 </h3>
                             </div>
@@ -28,7 +28,7 @@
                                 <i class="fa fa-star orange-color"></i>
                                 <i class="fa fa-star-o orange-color"></i>
                             </div>
-                            <a href="car_details.html" class="btn details-button">Preview</a>
+                            <a href="/bang-gia-xe/1" class="btn details-button">Preview</a>
                         </div>
                     </div>
 </template>

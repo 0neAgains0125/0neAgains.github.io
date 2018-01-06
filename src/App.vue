@@ -1982,7 +1982,7 @@ iframe {
 
 .contact-us-body {
   width: 100%;
-  padding: 100px 0px;
+  padding: 50px 0px;
 
   form {
     .btn-message {

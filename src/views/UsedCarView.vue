@@ -206,47 +206,7 @@
                 </aside>
                 <!-- Sidebar end-->
                 
-                <!-- Recent news Start-->
-                <div class="Recent-news">
-                    <h2 class="title">Recent News</h2>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="car_list_2.html#">
-                                <img class="media-object" src="/public/dict/img/recent/recent-1.jpg" alt="recent-1">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="car_details.html">Mercedes Benz C Class</a>
-                            <div class="line-dec-o"></div>
-                            <span>$42.000</span>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="car_list_2.html#">
-                                <img class="media-object" src="/public/dict/img/recent/recent-2.jpg" alt="recent-2">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="car_details.html">Jaguar f-type r</a>
-                            <div class="line-dec-o"></div>
-                            <span>$105,400</span>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="car_details.html">
-                                <img class="media-object" src="/public/dict/img/recent/recent-3.jpg" alt="recent-3">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="car_details.html">BMW e46 m3 diski serie</a>
-                            <div class="line-dec-o"></div>
-                            <span>$49.000</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Recent news end-->
+                <used-car-recent-news></used-car-recent-news>
                  
                 <!-- Car box Start-->
                 <div class="thumbnail car-box">
@@ -355,13 +315,13 @@
 import { watchList } from "../api";
 import CarList from "./CarList.vue";
 import CarItem from "../components/CarItem.vue";
-
+import RecentNews from "../components/RecentNews.vue";
 export default {
   name: "home-page",
-
   components: {
     "used-car-list-item": CarList,
-    "used-car-grid-item": CarItem
+    "used-car-grid-item": CarItem,
+    "used-car-recent-news": RecentNews
   },
 
   props: {

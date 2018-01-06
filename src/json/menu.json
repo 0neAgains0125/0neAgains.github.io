@@ -222,5 +222,22 @@
             "displayName": "Liên Hệ",
             "title": "Liên Hệ"
         }
+    },
+    {
+        "id": 14,
+        "icon": "fa fa-car",
+        "display": false,
+        "parentId": 0,
+        "nativeIds": null,
+        "en": {
+            "path": "/saling-registration",
+            "displayName": "Car Saling Registration",
+            "title": "Car Saling Registration"
+        },
+        "vi": {
+            "path": "/dang-ky-ban-xe",
+            "displayName": "Đăng ký bán xe",
+            "title": "Đăng ký bán xe"
+        }
     }
 ]

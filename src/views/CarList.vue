@@ -7,7 +7,7 @@
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 car-content clearfix">
                             <div class="header b-items-cars-one-info-header  s-lineDownLeft">
                                 <h3>
-                                    <a href="car_details.html">Audi q7 2017</a>
+                                    <a href="/bang-gia-xe/1">Audi q7 2017</a>
                                     <span>$54,905</span>
                                 </h3>
                             </div>

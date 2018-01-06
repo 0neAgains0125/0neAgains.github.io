@@ -1,90 +1,32 @@
 <template>
-<transaction :name="transition">
-  <div>Services</div>
-</transaction>
+<div class="blog-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-xs-12">
+              <slot></slot>
+            </div>
+             <div class="col-lg-4 col-md-4 col-xs-12">
+                <service-recent-news></service-recent-news>
+                <service-helping-center></service-helping-center>
+            </div>
+        </div>
+    </div>
+  </div>
+
 </template>
-
 <script>
-import { watchList } from "../api";
-import Banner from "../components/Banner.vue";
-import CarList from "./CarList.vue";
-
+import RecentNews from "../components/RecentNews.vue";
+import HelpingCenter from "../components/HelpingCenter.vue";
 export default {
-  name: "home-page",
-
+  name: "service-view",
   components: {
-    "home-page-banner": Banner,
-    "home-page-cars": CarList
+    "service-recent-news": RecentNews,
+    "service-helping-center": HelpingCenter
   },
-
-  props: {
-    type: String
-  },
-
   data() {
     return {
-      transition: "slide-right",
-      displayedPage: Number(this.$route.params.page) || 1,
-      displayedItems: this.$store.getters.activeItems
+      transition: "fade"
     };
-  },
-
-  computed: {
-    page() {
-      return Number(this.$route.params.page) || 1;
-    },
-    maxPage() {
-      const { itemsPerPage, lists } = this.$store.state;
-      return Math.ceil(lists[this.type].length / itemsPerPage);
-    },
-    hasMore() {
-      return this.page < this.maxPage;
-    }
-  },
-
-  beforeMount() {
-    if (this.$root._isMounted) {
-      this.loadItems(this.page);
-    }
-    // watch the current list for realtime updates
-    this.unwatchList = watchList(this.type, ids => {
-      this.$store.commit("SET_LIST", { type: this.type, ids });
-      this.$store.dispatch("ENSURE_ACTIVE_ITEMS").then(() => {
-        this.displayedItems = this.$store.getters.activeItems;
-      });
-    });
-  },
-
-  beforeDestroy() {
-    this.unwatchList();
-  },
-
-  watch: {
-    page(to, from) {
-      this.loadItems(to, from);
-    }
-  },
-
-  methods: {
-    loadItems(to = this.page, from = -1) {
-      this.$bar.start();
-      this.$store
-        .dispatch("FETCH_LIST_DATA", {
-          type: this.type
-        })
-        .then(() => {
-          if (this.page < 0 || this.page > this.maxPage) {
-            this.$router.replace(`/${this.type}/1`);
-            return;
-          }
-          this.transition =
-            from === -1 ? null : to > from ? "slide-left" : "slide-right";
-          this.displayedPage = to;
-          this.displayedItems = this.$store.getters.activeItems;
-          console.log(this.displayedItems);
-          this.$bar.finish();
-        });
-    }
   }
 };
 </script>
