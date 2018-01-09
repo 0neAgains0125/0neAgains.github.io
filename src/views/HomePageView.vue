@@ -2,7 +2,7 @@
 <transaction :name="transition">
   <home-page-banner></home-page-banner>
   <home-page-intro></home-page-intro>
-<home-page-cars></home-page-cars>
+<home-page-cars :data-source="listOfCars"></home-page-cars>
 <home-page-our-services></home-page-our-services>
 </transaction>
 </template>
@@ -16,7 +16,7 @@ import CarGrid from "./CarGrid.vue";
 
 export default {
   name: "home-page",
-
+  props:['type'],
   components: {
     "home-page-banner": Banner,
     "home-page-cars": CarGrid,
@@ -24,15 +24,13 @@ export default {
     "home-page-our-services": OurServices
   },
 
-  props: {
-    type: String
-  },
-
   data() {
     return {
+      mode: "grid",
       transition: "slide-right",
       displayedPage: Number(this.$route.params.page) || 1,
-      displayedItems: this.$store.getters.activeItems
+      displayedItems: this.$store.getters.activeItems,
+      listOfCars: require("../json/product.json")
     };
   },
 
@@ -65,7 +63,9 @@ export default {
   beforeDestroy() {
     this.unwatchList();
   },
-
+  created() {
+    console.log(this.$route);
+  },
   watch: {
     page(to, from) {
       this.loadItems(to, from);
@@ -73,6 +73,7 @@ export default {
   },
 
   methods: {
+   
     loadItems(to = this.page, from = -1) {
       this.$bar.start();
       this.$store

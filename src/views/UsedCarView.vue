@@ -8,13 +8,13 @@
                 <aside class="sidebar">
                     <div class="section-heading">
                         <i class="fa fa-search"></i>
-                        <h2>Search Car</h2>
+                        <h2>{{$t('Search Car')}}</h2>
                         <div class="border"></div>
-                        <h4>Search your desire car</h4>
+                        <h4>{{$t('Search your desire car')}}</h4>
                     </div>
 
                     <div class="search-block">
-                        <h2 class="title">Review Rating</h2>
+                        <h2 class="title">{{$t('Review Rating')}}</h2>
                         <ul class="ratings">
                             <li>
                                 <a href="car_list_2.html#">
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="search-block">
-                        <h2 class="title">Price</h2>
+                        <h2 class="title">{{$t('Price')}}</h2>
 
                         <div class="slider-price-amont">
                             <span class="pull-left">$1000</span>
@@ -93,11 +93,11 @@
                         <div class="row">
                             <div class="price-box">
                                 <div class="col-lg-6">
-                                    <label>Min price</label>
+                                    <label>{{$t('Min price')}}</label>
                                     <input class="form-control" placeholder="Min price" id="minPrice" value="1000">
                                 </div>
                                 <div class="col-lg-6">
-                                    <label>Max price</label>
+                                    <label>{{$t('Max price')}}</label>
                                     <input class="form-control" placeholder="Min price" id="maxPrice" value="50000">
                                 </div>
                             </div>
@@ -105,102 +105,45 @@
                     </div>
 
                     <div class="search-block">
-                        <h2 class="title">Brands</h2>
+                        <h2 class="title">{{$t('Brands')}}</h2>
 
                         <div class="checkbox checkbox-theme checkbox-circle">
                             <input id="checkbox8" type="checkbox">
                             <label for="checkbox8">
-                                Audi
+                                Altic
                             </label>
                         </div>
 
                         <div class="checkbox checkbox-theme checkbox-circle">
                             <input id="checkbox9" type="checkbox">
                             <label for="checkbox9">
-                                BMW
+                                Fortuner
                             </label>
                         </div>
 
                         <div class="checkbox checkbox-theme checkbox-circle">
                             <input id="checkbox10" type="checkbox">
                             <label for="checkbox10">
-                                Mercedes benz
+                                Innovar
                             </label>
                         </div>
 
                         <div class="checkbox checkbox-theme checkbox-circle">
                             <input id="checkbox11" type="checkbox">
                             <label for="checkbox11">
-                                Lamborghini
+                                Vios
                             </label>
                         </div>
 
                         <div class="checkbox checkbox-theme checkbox-circle">
                             <input id="checkbox12" type="checkbox">
                             <label for="checkbox12">
-                                Buick
-                            </label>
-                        </div>
-
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox13" type="checkbox">
-                            <label for="checkbox13">
-                                Bugatti
-                            </label>
-                        </div>
-
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox14" type="checkbox">
-                            <label for="checkbox14">
-                                Acura
+                                Camry
                             </label>
                         </div>
                     </div>
 
-                    <div class="search-block">
-                        <h2 class="title">Popular cars</h2>
-                        
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox5" type="checkbox">
-                            <label for="checkbox5">
-                                Lamborghini 2016
-                            </label>
-                        </div>
-
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox7" type="checkbox">
-                            <label for="checkbox7">
-                                Audi
-                            </label>
-                        </div>
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox4" type="checkbox">
-                            <label for="checkbox4">
-                                Jaguar F-Type R
-                            </label>
-                        </div>
-
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox3" type="checkbox">
-                            <label for="checkbox3">
-                                Porsche-Cayen-Last
-                            </label>
-                        </div>
-
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox2" type="checkbox">
-                            <label for="checkbox2">
-                                Mercedes Benz C Class
-                            </label>
-                        </div>
-
-                        <div class="checkbox checkbox-theme checkbox-circle">
-                            <input id="checkbox1" type="checkbox">
-                            <label for="checkbox1">
-                                Vencer Sarthe Supercar
-                            </label>
-                        </div>
-                    </div>
+                   
 
                     <div class="search-block"></div>
                 </aside>
@@ -208,103 +151,9 @@
                 
                 <used-car-recent-news></used-car-recent-news>
                  
-                <!-- Car box Start-->
-                <div class="thumbnail car-box">
-                    <a href="car_list_2.html#" class="sale">
-                        <span>sale</span>
-                    </a>
-                    <img src="/public/dict/img/grid/audi_q7_2017.jpg" alt="audi_q7_2017">
-                    <div class="caption car-content">
-                        <div class="header b-items-cars-one-info-header s-lineDownLeft">
-                            <h3>
-                                <a href="car_details.html">Audi q7 2017</a>
-                                <span>$42,605</span>
-                            </h3>
-                        </div>
-                        <p>Next level Pinterest farm-to-table selvage gentrify street art raw denim Helvetica street art pork belly.</p>
-                        <div class="car-tags">
-                            <ul>
-                                <li>2016</li>
-                                <li>Bensin</li>
-                                <li>Sport</li>
-                                <li>10.888m</li>
-                            </ul>
-                        </div>
-                        <a href="car_details.html" class="btn details-button">Preview</a>
-                    </div>
-                </div>
-                <!-- Car box end-->
+               
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-               <div class="row">
-                 <div class="option-bar">
-                   <div class="row">
-                       <div class="col-lg-6 col-md-6 col-sm-6">
-                           <div class="section-heading">
-                               <i class="fa fa-car"></i>
-                               <h2>recent cars</h2>
-                               <div class="border"></div>
-                               <h4>Check our all motors</h4>
-                           </div>
-                       </div>
-                       <div class="col-lg-6 col-md-6 col-sm-6 text-right">
-                           <div class="sorting-options">
-                               <select class="sorting">
-                                   <option>Price: High to low</option>
-                                   <option>Price: Low to high</option>
-                                   <option>Sells: High to low</option>
-                                   <option>Sells: Low to high</option>
-                               </select>
-                               <a href="javascript:;" @click="handleChangeMode('list')" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
-                               <a href="javascript:;" @click="handleChangeMode('grid')" class="change-view-btn"><i class="fa fa-th-large"></i></a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               </div>
-                
-                <div class="row">
-                  <template v-if="mode === 'list'">
-                    <used-car-list-item v-for="car in 10" :key="car"></used-car-list-item>
-                  </template>
-                  <template v-else>
-                    <div class="row" v-for="car in 5" :key="car">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                         <used-car-grid-item  ></used-car-grid-item>
-                      </div>
-                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                         <used-car-grid-item  ></used-car-grid-item>
-                      </div>
-                    </div>
-                  </template>
-                </div>
-                
-                
-
-                <!-- Page navigation start-->
-                <div class="text-center">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="car_list_2.html#" aria-label="Previous">
-                                <span aria-hidden="true">«</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="car_list_2.html#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="car_list_2.html#">2</a></li>
-                        <li><a href="car_list_2.html#">3</a></li>
-                        <li><a href="car_list_2.html#">4</a></li>
-                        <li><a href="car_list_2.html#">5</a></li>
-                        <li>
-                            <a href="car_list_2.html#" aria-label="Next">
-                                <span aria-hidden="true">»</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav> 
-                </div>
-                <!-- Page navigation end-->
-            </div>
+            <used-car-list-item :data-source="listOfCarsView"></used-car-list-item>
         </div>
     </div>
 </div>
@@ -314,26 +163,21 @@
 <script>
 import { watchList } from "../api";
 import CarList from "./CarList.vue";
-import CarItem from "../components/CarItem.vue";
 import RecentNews from "../components/RecentNews.vue";
 export default {
   name: "home-page",
   components: {
     "used-car-list-item": CarList,
-    "used-car-grid-item": CarItem,
     "used-car-recent-news": RecentNews
   },
-
-  props: {
-    type: String
-  },
+ props:['type'],
 
   data() {
     return {
       transition: "slide-right",
       displayedPage: Number(this.$route.params.page) || 1,
       displayedItems: this.$store.getters.activeItems,
-      mode: "list"
+      listOfCarsView: require("../json/product.json")
     };
   },
 

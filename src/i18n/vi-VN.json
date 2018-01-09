@@ -1,5 +1,23 @@
 {
     "hello": "Xin chào",
     "registerToBuyNewCard": "Đăng ký mua xe",
-    "registerSaleYourCar": "Đăng ký bán xe"
+    "registerSaleYourCar": "Đăng ký bán xe",
+    "detail": "Chi tiết",
+    "Review Rating": "Lượt đánh giá",
+    "Search Car": "Tìm kiếm xe",
+    "Price": "Giá",
+    "Min price": "Giá thấp nhất",
+    "Max price": "Giá cao nhất",
+    "Search your desire car": "Tìm kiếm chiếc xe mong muốn của bạn",
+    "Brands": "Nhãn hiệu",
+    "Recent cars": "Những chiếc gần đây",
+    "Check our all motors": "Kiểm tra tất cả",
+    "Price: High to low": "Giá từ cao đến thấp",
+    "Price: Low to high": "Giá từ thấp đến cao",
+    "Details": "Thông tin chi tiết",
+    "Planned installment payment": "Bảng dự tính trả góp",
+    "Estimated cost to name": "Chi phí dự tính sang tên",
+    "Car specifications": "THÔNG SỐ KỸ THUẬT",
+    "Check the car specifications": "Kiểm tra thông số kỹ thuật",
+    "Vehicles": "Dòng xe"
 }

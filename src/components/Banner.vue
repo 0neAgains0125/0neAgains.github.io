@@ -47,5 +47,10 @@
 </div>
 </template>
 <script>
-export default {};
+export default {
+    props:[{
+        name: "bannerItem",
+    type: [String, Array, Object]
+    }]
+};
 </script>

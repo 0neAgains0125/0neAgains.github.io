@@ -13,30 +13,29 @@
                        <div class="col-lg-6 col-md-6 col-sm-6">
                            <div class="section-heading ">
                                <i class="fa fa-car"></i>
-                               <h2>recent cars</h2>
+                               <h2>{{$t('Recent cars')}}</h2>
                                <div class="border"></div>
-                               <h4>Check our all motors</h4>
+                               <h4>{{$t('Check our all motors')}}</h4>
                            </div>
                        </div>
                        <div class="col-lg-6 col-md-6 col-sm-6 text-right">
                            <div class="sorting-options">
                                <select class="sorting">
-                                   <option>Price: High to low</option>
-                                   <option>Price: Low to high</option>
-                                   <option>Sells: High to low</option>
-                                   <option>Sells: Low to high</option>
+                                   <option>{{$t('Price: High to low')}}</option>
+                                   <option>{{$t('Price: Low to high')}}</option>
                                </select>
-                               <a href="car_list.html" class="change-view-btn "><i class="fa fa-th-list"></i></a>
-                               <a href="car_grid.html" class="change-view-btn active-view-btn"><i class="fa fa-th-large"></i></a>
+                               <a href="javascript:;" @click="handleChangeMode('list')" class="change-view-btn "><i class="fa fa-th-list"></i></a>
+                               <a href="javascript:;" @click="handleChangeMode('grid')" class="change-view-btn active-view-btn"><i class="fa fa-th-large"></i></a>
                            </div>
                        </div>
                    </div>
                </div>
-<div class="row">
-  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="car in 12" :key="car">
-        <car-item :car-item="car"></car-item>
-    </div>
-</div>
+                <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" v-for="(car, index) in listOfCars" :key="index">
+                        <!-- <car-item :car-item="car"></car-item> -->
+                        <car-item :item="car"></car-item>
+                    </div>
+                </div>
                 <!-- Page navigation start-->
                <div class="text-center">
                   <nav aria-label="Page navigation">
@@ -81,9 +80,7 @@ export default {
     "car-item": CarItem
   },
 
-  props: {
-    type: String
-  },
+  props: ['dataSource'],
 
   data() {
     return {
@@ -94,60 +91,9 @@ export default {
   },
 
   computed: {
-    page() {
-      return Number(this.$route.params.page) || 1;
-    },
-    maxPage() {
-      const { itemsPerPage, lists } = this.$store.state;
-      return Math.ceil(lists[this.type].length / itemsPerPage);
-    },
-    hasMore() {
-      return this.page < this.maxPage;
-    }
-  },
-
-  beforeMount() {
-    if (this.$root._isMounted) {
-      this.loadItems(this.page);
-    }
-    // watch the current list for realtime updates
-    this.unwatchList = watchList(this.type, ids => {
-      this.$store.commit("SET_LIST", { type: this.type, ids });
-      this.$store.dispatch("ENSURE_ACTIVE_ITEMS").then(() => {
-        this.displayedItems = this.$store.getters.activeItems;
-      });
-    });
-  },
-
-  beforeDestroy() {
-    this.unwatchList();
-  },
-
-  watch: {
-    page(to, from) {
-      this.loadItems(to, from);
-    }
-  },
-
-  methods: {
-    loadItems(to = this.page, from = -1) {
-      this.$bar.start();
-      this.$store
-        .dispatch("FETCH_LIST_DATA", {
-          type: this.type
-        })
-        .then(() => {
-          if (this.page < 0 || this.page > this.maxPage) {
-            this.$router.replace(`/${this.type}/1`);
-            return;
-          }
-          this.transition =
-            from === -1 ? null : to > from ? "slide-left" : "slide-right";
-          this.displayedPage = to;
-          this.displayedItems = this.$store.getters.activeItems;
-          console.log(this.displayedItems);
-          this.$bar.finish();
-        });
+    listOfCars() {
+      console.log(this.dataSource)
+      return this.dataSource;
     }
   }
 };
