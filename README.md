@@ -1,54 +1,92 @@
-# Toyota Nguyen Van Luong Project - Using vuejs server-side rendering approaches
+<template>
+<transaction :name="transition">
+  <home-page-banner></home-page-banner>
+  <home-page-intro></home-page-intro>
+<home-page-cars :data-source="listOfCars"></home-page-cars>
+<home-page-our-services></home-page-our-services>
+</transaction>
+</template>
 
-Toyota Nguyen Van Luong clone built with Vue 2.0 + vue-router + vuex, with server-side rendering.
-
-
-## Features
-
-> Note: in practice, it is unnecessary to code-split for an app of this size (where each async chunk is only a few kilobytes), nor is it optimal to extract an extra CSS file (which is only 1kb) -- they are used simply because this is a demo app showcasing all the supported features. In real apps, you should always measure and optimize based on your actual app constraints.
-
-- Server Side Rendering
-  - Vue + vue-router + vuex working together
-  - Server-side data pre-fetching
-  - Client-side state & DOM hydration
-  - Automatically inlines CSS used by rendered components only
-  - Preload / prefetch resource hints
-  - Route-level code splitting
-- Progressive Web App
-  - App manifest
-  - Service worker
-  - 100/100 Lighthouse score
-- Single-file Vue Components
-  - Hot-reload in development
-  - CSS extraction for production
-- Animation
-  - Effects when switching route views
-  - Real-time list updates with FLIP Animation
-
-## Architecture Overview
-
-<img width="973" alt="screen shot 2016-08-11 at 6 06 57 pm" src="https://cloud.githubusercontent.com/assets/499550/17607895/786a415a-5fee-11e6-9c11-45a2cfdf085c.png">
-
-**A detailed Vue SSR guide can be found [here](https://ssr.vuejs.org).**
-
-## Build Setup
-
-**Requires Node.js 7+**
-
-``` bash
-# install dependencies
-npm install # or yarn
-
-# serve in dev mode, with hot reload at localhost:8080
-npm run dev
-
-# build for production
-npm run build
-
-# serve in production mode
-npm start
-```
-
-## License
-
-MIT
+<script>
+import { watchList } from "../api";
+import Banner from "../components/Banner.vue";
+import Introduction from "../components/Introduction.vue";
+import OurServices from "../components/OurServices.vue";
+import CarGrid from "./CarGrid.vue";
+export default {
+  name: "home-page",
+  props:['type'],
+  components: {
+    "home-page-banner": Banner,
+    "home-page-cars": CarGrid,
+    "home-page-intro": Introduction,
+    "home-page-our-services": OurServices
+  },
+  data() {
+    return {
+      mode: "grid",
+      transition: "slide-right",
+      displayedPage: Number(this.$route.params.page) || 1,
+      displayedItems: this.$store.getters.activeItems,
+      listOfCars: require("../json/product.json")
+    };
+  },
+  computed: {
+    page() {
+      return Number(this.$route.params.page) || 1;
+    },
+    maxPage() {
+      const { itemsPerPage, lists } = this.$store.state;
+      return Math.ceil(lists[this.type].length / itemsPerPage);
+    },
+    hasMore() {
+      return this.page < this.maxPage;
+    }
+  },
+  beforeMount() {
+    if (this.$root._isMounted) {
+      this.loadItems(this.page);
+    }
+    // watch the current list for realtime updates
+    this.unwatchList = watchList(this.type, ids => {
+      this.$store.commit("SET_LIST", { type: this.type, ids });
+      this.$store.dispatch("ENSURE_ACTIVE_ITEMS").then(() => {
+        this.displayedItems = this.$store.getters.activeItems;
+      });
+    });
+  },
+  beforeDestroy() {
+    this.unwatchList();
+  },
+  created() {
+    console.log(this.$route);
+  },
+  watch: {
+    page(to, from) {
+      this.loadItems(to, from);
+    }
+  },
+  methods: {
+   
+    loadItems(to = this.page, from = -1) {
+      this.$bar.start();
+      this.$store
+        .dispatch("FETCH_LIST_DATA", {
+          type: this.type
+        })
+        .then(() => {
+          if (this.page < 0 || this.page > this.maxPage) {
+            this.$router.replace(`/${this.type}/1`);
+            return;
+          }
+          this.transition =
+            from === -1 ? null : to > from ? "slide-left" : "slide-right";
+          this.displayedPage = to;
+          this.displayedItems = this.$store.getters.activeItems;
+          console.log(this.displayedItems);
+          this.$bar.finish();
+        });
+    }
+  }
+};
+</script>
